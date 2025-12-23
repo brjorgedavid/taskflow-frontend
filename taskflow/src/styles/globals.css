@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #FAFAFA;
+  color: #374151;
+  min-height: 100vh;
+}
+
+.glass-morphism {
+  background: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(55, 65, 81, 0.06);
+  border: 1px solid rgba(59,130,246,0.06);
+}
+
+.card-hover { transition: all 0.22s ease; }
+.card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(55,65,81,0.08); }
+
+.gradient-text { background: linear-gradient(90deg,#3B82F6 0%,#2563EB 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+.btn-primary { background: linear-gradient(90deg,#3B82F6 0%,#2563EB 100%); color: #FFFFFF; transition: all 0.18s ease; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(59,130,246,0.12); }
+
+.status-badge { animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;}50%{opacity:0.85;} }
+
+.fade-in { animation: fadeIn 0.45s ease-in; }
+@keyframes fadeIn { from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
+
+input:focus, select:focus { outline: none; border-color: #3B82F6; box-shadow: 0 0 0 6px rgba(59,130,246,0.06); }
+
+.table-row { transition: background 0.15s ease; }
+.table-row:hover { background: rgba(59,130,246,0.03); }
+
+.loading-spinner { border: 3px solid rgba(55,65,81,0.08); border-top-color: #3B82F6; border-radius:50%; width:40px; height:40px; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.badge { display:inline-block; padding:0.25rem 0.75rem; border-radius:9999px; font-size:0.75rem; font-weight:600; text-transform:uppercase; }
+.badge-admin { background: #3B82F6; color: #fff; }
+.badge-manager { background: #2DD4BF; color: #0f172a; }
+.badge-employee { background: #E6F9F7; color: #0f172a; }
+.badge-pending { background: #FBF1F2; color: #0f172a; }
+.badge-approved { background: #E8FFFA; color: #0f172a; }
+.badge-rejected { background: #FFEFF1; color: #0f172a; }
+
+.nav-link { position: relative; transition: all 0.18s ease; }
+.nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #3B82F6; transition: width 0.25s ease; }
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+.text-primary { color: #374151; }
+.text-muted { color: #6B7280; }
+.bg-card { background: #FFFFFF; }
